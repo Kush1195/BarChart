@@ -2,7 +2,6 @@ package com.example.user.barchart;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -31,17 +30,21 @@ public class MainActivity extends AppCompatActivity {
         float start = 1f;
 
         ArrayList<BarEntry> yVals1 = new ArrayList<BarEntry>();
+        yVals1.add(new BarEntry(0, 60f));
+        yVals1.add(new BarEntry(1, 40f));
+        yVals1.add(new BarEntry(2, 30f));
+        yVals1.add(new BarEntry(3, 60f));
+        yVals1.add(new BarEntry(4, 40f));
+        yVals1.add(new BarEntry(5, 30f));
+        yVals1.add(new BarEntry(6, 60f));
+        yVals1.add(new BarEntry(7, 40f));
+        yVals1.add(new BarEntry(8, 30f));
+        yVals1.add(new BarEntry(9, 70f));
+        yVals1.add(new BarEntry(9, 80f));
 
-        for (int i = (int) start; i < start + count + 1; i++) {
-            float mult = (range + 1);
-            float val = (float) (Math.random() * mult);
 
-            if (Math.random() * 100 < 25) {
-                yVals1.add(new BarEntry(i, val, ContextCompat.getDrawable(mContext, R.drawable.star)));
-            } else {
-                yVals1.add(new BarEntry(i, val));
-            }
-        }
+
+
 
         BarDataSet set1;
 
